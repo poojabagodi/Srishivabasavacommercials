@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shri ShivaBasava Commercials</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f9f4;
+    color:#222;
+}
+
+.navbar{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+}
+
+.logo{
+    font-size:1.4rem;
+    font-weight:700;
+    color:#1b5e20;
+}
+
+.nav-links a{
+    text-decoration:none;
+    margin-left:25px;
+    color:#333;
+    font-weight:500;
+}
+
+.hero{
+    min-height:100vh;
+    background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+    url('https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:3.5rem;
+    margin-bottom:15px;
+}
+
+.hero-content p{
+    font-size:1.2rem;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 28px;
+    background:#d4af37;
+    color:#000;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    margin:8px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    color:#1b5e20;
+    font-size:2.3rem;
+}
+
+.about{
+    background:white;
+}
+
+.about p{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:1.8;
+    color:#555;
+}
+
+.products{
+    background:#f5f7f2;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    color:#1b5e20;
+    margin-bottom:10px;
+}
+
+.card-content p{
+    color:#666;
+    margin-bottom:15px;
+}
+
+.features{
+    background:white;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.feature{
+    background:#f7f7f7;
+    padding:25px;
+    text-align:center;
+    border-radius:15px;
+}
+
+.feature i{
+    font-size:2rem;
+    color:#1b5e20;
+    margin-bottom:12px;
+}
+
+.contact{
+    background:#1b5e20;
+    color:white;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:40px;
+}
+
+.contact-info p{
+    margin:15px 0;
+}
+
+.contact-info i{
+    color:#d4af37;
+    margin-right:10px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:8px;
+}
+
+.contact-form button{
+    background:#d4af37;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+.socials{
+    margin-top:15px;
+}
+
+.socials a{
+    color:white;
+    margin:0 10px;
+    font-size:1.3rem;
+}
+
+.whatsapp-float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:25px;
+    right:25px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,0.25);
+    animation:pulse 2s infinite;
+    z-index:999;
+}
+
+@keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7);}
+    70%{box-shadow:0 0 0 20px rgba(37,211,102,0);}
+    100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+    font-size:2.4rem;
+}
+
+.navbar{
+    flex-direction:column;
+    gap:10px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">Shri ShivaBasava Commercials</div>
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Premium Quality Rice</h1>
+        <p>Trusted Supplier of Sona Masuri, Ganga Kaveri & RNR Rice</p>
+        <a href="#products" class="btn">Explore Products</a>
+        <a href="#contact" class="btn">Contact Us</a>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <div class="section-title">
+        <h2>About Us</h2>
+    </div>
+
+    <p>
+        Shri ShivaBasava Commercials is committed to delivering premium-quality rice
+        varieties to households, retailers, restaurants, and wholesalers. We specialize
+        in Sona Masuri, Ganga Kaveri, and RNR rice, ensuring superior quality,
+        freshness, and customer satisfaction. Our focus is to provide trusted products
+        at competitive prices while building long-term relationships with our customers.
+    </p>
+</section>
+
+<section id="products" class="products">
+    <div class="section-title">
+        <h2>Our Rice Varieties</h2>
+    </div>
+
+    <div class="product-grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=crop&w=800&q=80">
+            <div class="card-content">
+                <h3>Sona Masuri Rice</h3>
+                <p>Lightweight, aromatic and ideal for daily meals with excellent taste and texture.</p>
+                <a href="https://wa.me/919845509531" class="btn">Enquire Now</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=800&q=80">
+            <div class="card-content">
+                <h3>Ganga Kaveri Rice</h3>
+                <p>Premium quality grains with rich flavor, perfect for families and bulk buyers.</p>
+                <a href="https://wa.me/919845509531" class="btn">Enquire Now</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1603048719539-9ecb4f0f8152?auto=format&fit=crop&w=800&q=80">
+            <div class="card-content">
+                <h3>RNR Rice</h3>
+                <p>Soft texture, healthy choice and one of the most preferred varieties for daily use.</p>
+                <a href="https://wa.me/919845509531" class="btn">Enquire Now</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="features">
+    <div class="section-title">
+        <h2>Why Choose Us?</h2>
+    </div>
+
+    <div class="feature-grid">
+
+        <div class="feature">
+            <i class="fa-solid fa-award"></i>
+            <h3>Premium Quality</h3>
+        </div>
+
+        <div class="feature">
+            <i class="fa-solid fa-truck"></i>
+            <h3>Reliable Delivery</h3>
+        </div>
+
+        <div class="feature">
+            <i class="fa-solid fa-handshake"></i>
+            <h3>Trusted Supplier</h3>
+        </div>
+
+        <div class="feature">
+            <i class="fa-solid fa-tags"></i>
+            <h3>Competitive Pricing</h3>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="section-title">
+        <h2 style="color:white">Contact Us</h2>
+    </div>
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+            <p><i class="fa-solid fa-phone"></i> +91 9845509531</p>
+            <p><i class="fa-brands fa-whatsapp"></i> +91 9845509531</p>
+            <p><i class="fa-solid fa-envelope"></i> contact@shrishivabasava.com</p>
+            <p><i class="fa-brands fa-linkedin"></i> LinkedIn Profile</p>
+        </div>
+
+        <div class="contact-form">
+            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="Mobile Number">
+            <textarea rows="5" placeholder="Message"></textarea>
+            <button>Send Enquiry</button>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <h3>Shri ShivaBasava Commercials</h3>
+    <p>Quality Rice • Trusted Service</p>
+
+    <div class="socials">
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:contact@shrishivabasava.com"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://wa.me/919845509531"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+</footer>
+
+<a href="https://wa.me/919845509531" class="whatsapp-float" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
